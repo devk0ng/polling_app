@@ -46,7 +46,7 @@ Spring boot, Jpa, Mysql
 
 #### E-R Diagram
 
-![er (1)](https://user-images.githubusercontent.com/31160622/102716305-62c3a180-431e-11eb-84cf-2bb770fc201a.png)
+![er (2)](https://user-images.githubusercontent.com/31160622/102717491-02d0f900-4326-11eb-9cf1-0ae048126454.png)
 
 
 <br/>
@@ -158,6 +158,42 @@ Spring boot, Jpa, Mysql
 
 * Mainpage
   * PollingList
+
+**3. 추가 설명**
+
+1) 우측상단의 버튼들을 통해 화면이동 가능. My 버튼의 경우 드롭다운 형태로 위 그림과 같은 메뉴들이 존재
+2) 설문목록들의 컨텐츠들은 클릭가능이며 만약 투표를 하였을 경우 결과화면으로, 하지 않았을 경우 투표화면으로 이동
+
+<br/>
+
+
+
+### VotePolling 화면
+
+<img width="789" alt="설문투표" src="https://user-images.githubusercontent.com/31160622/102717502-1f6d3100-4326-11eb-9db1-f07ac8bfc3e9.PNG">
+
+
+
+**Short Description**
+
+: 설문목록 화면에서 투표를 하지않은 컨텐츠를 클릭하였을 때 이동하는 설문투표 화면.
+
+<br/>
+
+**Detail Description**
+
+**1. Component**
+
+* Mainpage (노란색) : 로그인 성공 후 화면구성에 대해 전체 틀을 담당하는 컴포넌트
+* Voting (파란색) : 투표내용들을 담기 위한 틀을 담당하는 컴포넌트
+* ObjectiveVote (초록색) : 객관식 질문과 보기들을 나타내기 위한 컴포넌트
+* SubjectiveVote (빨간색) : 주관식 질문과 그 해답을 입력받는 것을 위한 컴포넌트
+
+**2. component구조**
+
+* Mainpage
+  * Voting
+    * Objective
 
 **3. 추가 설명**
 
