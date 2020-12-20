@@ -60,7 +60,7 @@
 
 : 해당 E-R Diagram을 바탕으로 구성한 데이터베이스 스키마
 
-![revised_schema](https://user-images.githubusercontent.com/31160622/102472416-a22d8c00-4099-11eb-8ab7-0480dae88a92.png)
+![revised_schema](https://user-images.githubusercontent.com/31160622/102718796-762a3900-432d-11eb-88d1-1ebadf800e5d.png)
 
 <br/>
 
