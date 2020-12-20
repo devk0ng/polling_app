@@ -100,3 +100,35 @@ Spring boot, Jpa, Mysql
 **3. 추가 설명**
 
 : 존재하지 않는 회원정보일 경우 팝업창을 통해 알림. 존재하는 회원정보일 경우 Polling List를 볼 수 있는 화면으로 이동
+
+<br/>
+
+
+
+### Register 화면
+
+<img width="787" alt="회원가입" src="https://user-images.githubusercontent.com/31160622/102716756-2e051980-4321-11eb-9107-189a18ead5e4.PNG">
+
+
+**Short Description**
+
+: 로그인화면에서 회원가입 버튼을 통해 이동하는 화면. 회원가입을 담당
+
+<br/>
+
+**Detail Description**
+
+**1. Component**
+
+* Startpage (노란색) : 처음 로그인과 회원가입에 있어 전체 틀을 담당하는 컴포넌트
+* Register (파란색) : User의 입력을 통한 회원가입을 담당하는 컴포넌트
+
+**2. component구조**
+
+* Startpage
+  * Register
+
+**3. 추가 설명**
+
+: 추가적으로 검증하는 부분(아이디 중복, 비밀번호 확인)은 존재하지 않으며 User에게서 입력받은 정보를 바탕으로 회원가입을 진행.
+
