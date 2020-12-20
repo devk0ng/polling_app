@@ -41,7 +41,8 @@
 
 #### E-R Diagram
 
-![er](https://user-images.githubusercontent.com/31160622/102334220-c4f46d80-3fd1-11eb-8b25-775612282bb9.png)
+![er (1)](https://user-images.githubusercontent.com/31160622/102716305-62c3a180-431e-11eb-84cf-2bb770fc201a.png)
+
 
 <br/>
 
