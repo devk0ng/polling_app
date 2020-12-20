@@ -95,8 +95,8 @@ Spring boot, Jpa, Mysql
 **2. component구조**
 
 * Startpage
-  * Login
+ * Login
 
-**2. 추가 설명**
+**3. 추가 설명**
 
 : 존재하지 않는 회원정보일 경우 팝업창을 통해 알림. 존재하는 회원정보일 경우 Polling List를 볼 수 있는 화면으로 이동
