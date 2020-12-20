@@ -85,6 +85,8 @@ Spring boot, Jpa, Mysql
 
 
 
+
+
 **Detail Description**
 
 **1. Component**
@@ -92,6 +94,7 @@ Spring boot, Jpa, Mysql
 * Startpage (노란색) : 처음 로그인과 회원가입에 있어 전체 틀을 담당하는 컴포넌트
 * Login (파란색) : User의 입력을 통한 로그인 또는 회원가입으로 이동할 수 있는 컴포넌트
 
-**추가 설명**
+
+**2. 추가 설명**
 
 : 존재하지 않는 회원정보일 경우 팝업창을 통해 알림. 존재하는 회원정보일 경우 Polling List를 볼 수 있는 화면으로 이동
