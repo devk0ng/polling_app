@@ -92,6 +92,10 @@ Spring boot, Jpa, Mysql
 * Startpage (노란색) : 처음 로그인과 회원가입에 있어 전체 틀을 담당하는 컴포넌트
 * Login (파란색) : User의 입력을 통한 로그인 또는 회원가입으로 이동할 수 있는 컴포넌트
 
+**2. component구조**
+
+* Startpage
+  * Login
 
 **2. 추가 설명**
 
