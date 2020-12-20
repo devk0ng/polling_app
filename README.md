@@ -155,7 +155,7 @@
 **1. Component**
 
 * Mainpage (노란색) : 로그인 성공 후 화면구성에 대해 전체 틀을 담당하는 컴포넌트
-* PollingList (파란색) : User의 입력을 통한 회원가입을 담당하는 컴포넌트
+* PollingList (파란색) : 설문목록들을 나타내는 것을 담당하는 컴포넌트
 
 **2. component구조**
 
@@ -306,7 +306,7 @@
 **1. Component**
 
 * Mainpage (노란색) : 로그인 성공 후 화면구성에 대해 전체 틀을 담당하는 컴포넌트
-* PollingList (파란색) : User의 입력을 통한 회원가입을 담당하는 컴포넌트
+* PollingList (파란색) : 설문목록들을 나타내는 것을 담당하는 컴포넌트
 
 
 **2. component구조**
@@ -341,7 +341,7 @@
 **1. Component**
 
 * Mainpage (노란색) : 로그인 성공 후 화면구성에 대해 전체 틀을 담당하는 컴포넌트
-* PollingList (파란색) : User의 입력을 통한 회원가입을 담당하는 컴포넌트
+* PollingList (파란색) : 설문목록들을 나타내는 것을 담당하는 컴포넌트
 
 
 **2. component구조**
