@@ -279,3 +279,72 @@ Spring boot, Jpa, Mysql
 2) 객관식 질문의 경우 추가 버튼을 통해 보기들을 추가 가능
 3) subjective 버튼을 통해 주관식 질문 추가를, objective 버튼을 통해 객관식 질문 추가가능
 4) 취소를 할 경우 설문에 대한 저장 없이 목록화면으로, 완료를 할 경우 설문에 대한 내용들을 저장 후 목록화면으로 이동
+
+
+<br/>
+
+
+
+### MyPolling 화면
+
+<img width="788" alt="내가만든설문" src="https://user-images.githubusercontent.com/31160622/102717933-b33ffc80-4328-11eb-8b8c-3dcf40b12c6d.PNG">
+
+
+
+**Short Description**
+
+: 오른쪽 상단의 My버튼 클릭시 dropdown 되는 메뉴 중 My Polling을 클릭하여 이동하는 내가 생성한 설문목록들을 위한 화면
+
+<br/>
+
+**Detail Description**
+
+**1. Component**
+
+* Mainpage (노란색) : 로그인 성공 후 화면구성에 대해 전체 틀을 담당하는 컴포넌트
+* PollingList (파란색) : User의 입력을 통한 회원가입을 담당하는 컴포넌트
+
+
+**2. component구조**
+
+* Mainpage
+  * PollingList
+
+**3. 추가 설명**
+
+: 전체적인 구조는 설문목록과 동일하나 회원정보를 바탕으로 그 회원이 생성한 설문목록들을 보여준다는 차이점이 존재하는 화면
+
+
+
+<br/>
+
+
+
+### VotingList 화면
+
+<img width="787" alt="내가투표한설문" src="https://user-images.githubusercontent.com/31160622/102718009-1598fd00-4329-11eb-9651-acbd5ef3493f.PNG">
+
+
+
+**Short Description**
+
+: 오른쪽 상단의 My버튼 클릭시 dropdown 되는 메뉴 중 Voting List을 클릭하여 이동하는 내가 투표한 설문목록들을 위한 화면
+
+<br/>
+
+**Detail Description**
+
+**1. Component**
+
+* Mainpage (노란색) : 로그인 성공 후 화면구성에 대해 전체 틀을 담당하는 컴포넌트
+* PollingList (파란색) : User의 입력을 통한 회원가입을 담당하는 컴포넌트
+
+
+**2. component구조**
+
+* Mainpage
+  * PollingList
+
+**3. 추가 설명**
+
+: 전체적인 구조는 설문목록과 동일하나 회원정보를 바탕으로 그 회원이 투표한 설문목록들을 보여준다는 차이점이 존재하는 화면
