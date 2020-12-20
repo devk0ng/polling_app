@@ -25,7 +25,7 @@
 * Spring boot
 * Jpa
 * Mysql
-* 
+* React
 
 <br/>
 
