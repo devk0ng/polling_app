@@ -75,7 +75,7 @@ Spring boot, Jpa, Mysql
 
 
 
-#### Login 화면
+### Login 화면
 
 <img width="790" alt="로그인" src="https://user-images.githubusercontent.com/31160622/102716445-59870480-431f-11eb-9627-84506e24dadb.PNG">
 
@@ -83,9 +83,7 @@ Spring boot, Jpa, Mysql
 
 : 접속시 가장 먼저 보이는 화면으로 로그인을 통해 설문기능을 사용할 수 있는 화면으로 이동할 수 있습니다. 
 
-
-
-
+<br/>
 
 **Detail Description**
 
