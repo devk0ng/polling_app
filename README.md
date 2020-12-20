@@ -25,7 +25,7 @@
 ## 구조 설계
 
 
-#### 도메인 설계 (JPA)
+#### 도메인 설계 (JPA 기반 Entity 관계 설계)
 
 ![real_final_class](https://user-images.githubusercontent.com/31160622/102716198-9a7e1980-431d-11eb-9e11-ace1aa1ca301.png)
 
