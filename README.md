@@ -95,7 +95,7 @@ Spring boot, Jpa, Mysql
 **2. component구조**
 
 * Startpage
- * Login
+  * Login
 
 **3. 추가 설명**
 
