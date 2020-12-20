@@ -193,9 +193,89 @@ Spring boot, Jpa, Mysql
 
 * Mainpage
   * Voting
-    * Objective
+    * ObjectiveVote
+    * SubjectiveVote
 
 **3. 추가 설명**
 
-1) 우측상단의 버튼들을 통해 화면이동 가능. My 버튼의 경우 드롭다운 형태로 위 그림과 같은 메뉴들이 존재
-2) 설문목록들의 컨텐츠들은 클릭가능이며 만약 투표를 하였을 경우 결과화면으로, 하지 않았을 경우 투표화면으로 이동
+1) 객관식에 대한 답변을 할 수 있는 내용들을 상단에 먼저 띄운 후 하단에 주관식에 대한 내용들을 띄울 것 (데이터를 불러와 화면에 나타낼 때 편의를 위해)
+2) 완료버튼을 클릭 시 설문목록으로 화면이동
+
+
+<br/>
+
+
+
+### PollingResult 화면
+
+<img width="789" alt="설문결과" src="https://user-images.githubusercontent.com/31160622/102717658-0c0e9580-4327-11eb-84ec-a0b62f55edf9.PNG">
+
+
+
+**Short Description**
+
+: 설문목록 화면에서 투표를 한 컨텐츠를 클릭하였을 때 이동하는 설문결과 화면.
+
+<br/>
+
+**Detail Description**
+
+**1. Component**
+
+* Mainpage (노란색) : 로그인 성공 후 화면구성에 대해 전체 틀을 담당하는 컴포넌트
+* Voting (파란색) : 결과내용들을 담기 위한 틀을 담당하는 컴포넌트
+* ObjectiveResult (초록색) : 객관식 결과에 대한 내용들을 나타내기 위한 컴포넌트
+* SubjectiveReuslt (빨간색) : 주관식 결과에 대한 내용들을 나타내기 위한 컴포넌트
+
+**2. component구조**
+
+* Mainpage
+  * Voting
+    * ObjectiveResult
+    * SubjectiveResult
+
+**3. 추가 설명**
+
+1) 객관식에 대한 결과들을 상단에 먼저 띄운 후 하단에 주관식에 대한 내용들을 띄울 것 (투표화면과 같은 이유에서)
+2) 돌아가기 버튼을 클릭 시 설문목록으로 화면이동
+
+
+
+<br/>
+
+
+
+### MakePolling 화면
+
+<img width="786" alt="설문만들기" src="https://user-images.githubusercontent.com/31160622/102717861-4b89b180-4328-11eb-91b0-6402268eac91.PNG">
+
+
+
+**Short Description**
+
+: 오른쪽 상단의 MakePolling 버튼을 클릭시 이동하는 설문생성 화면.
+
+<br/>
+
+**Detail Description**
+
+**1. Component**
+
+* Mainpage (노란색) : 로그인 성공 후 화면구성에 대해 전체 틀을 담당하는 컴포넌트
+* Making (파란색) : 질문내용들을 담기 위한 틀을 담당하는 컴포넌트
+* ObjectiveMake (초록색) : 객관식 질문 대한 내용들을 나타내기 위한 컴포넌트
+* SubjectiveMake (빨간색) : 주관식 질문에 대한 내용들을 나타내기 위한 컴포넌트
+
+**2. component구조**
+
+* Mainpage
+  * Making
+    * ObjectiveMake
+    * SubjectiveMake
+
+**3. 추가 설명**
+
+1) 우측 상단의 Make Polling 버튼을 통해 들어올 수 있는 화면이며 설문생성을 담당
+2) 객관식 질문의 경우 추가 버튼을 통해 보기들을 추가 가능
+3) subjective 버튼을 통해 주관식 질문 추가를, objective 버튼을 통해 객관식 질문 추가가능
+4) 취소를 할 경우 설문에 대한 저장 없이 목록화면으로, 완료를 할 경우 설문에 대한 내용들을 저장 후 목록화면으로 이동
