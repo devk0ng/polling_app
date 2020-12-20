@@ -226,14 +226,14 @@
 **1. Component**
 
 * Mainpage (노란색) : 로그인 성공 후 화면구성에 대해 전체 틀을 담당하는 컴포넌트
-* Voting (파란색) : 결과내용들을 담기 위한 틀을 담당하는 컴포넌트
+* Result (파란색) : 결과내용들을 담기 위한 틀을 담당하는 컴포넌트
 * ObjectiveResult (초록색) : 객관식 결과에 대한 내용들을 나타내기 위한 컴포넌트
 * SubjectiveReuslt (빨간색) : 주관식 결과에 대한 내용들을 나타내기 위한 컴포넌트
 
 **2. component구조**
 
 * Mainpage
-  * Voting
+  * Result
     * ObjectiveResult
     * SubjectiveResult
 
