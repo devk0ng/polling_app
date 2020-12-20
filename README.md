@@ -19,6 +19,11 @@
 **3. 기타 요구사항**
 * 설문 생성은 객관식, 주관식 두가지 타입으로 가능
 
+
+
+**4. 기술 사항**
+Spring boot, Jpa, Mysql
+
 <br/>
 
 
@@ -63,3 +68,30 @@
 ![sqlworkbench_erd](https://user-images.githubusercontent.com/31160622/102716226-cac5b800-431d-11eb-9aad-fec82b19ffda.PNG)
 
 <br/>
+
+
+
+## UI 설계
+
+
+
+#### Login 화면
+
+<img width="790" alt="로그인" src="https://user-images.githubusercontent.com/31160622/102716445-59870480-431f-11eb-9627-84506e24dadb.PNG">
+
+**Short Description**
+
+: 접속시 가장 먼저 보이는 화면으로 로그인을 통해 설문기능을 사용할 수 있는 화면으로 이동할 수 있습니다. 
+
+
+
+**Detail Description**
+
+**1. Component**
+
+* Startpage (노란색) : 처음 로그인과 회원가입에 있어 전체 틀을 담당하는 컴포넌트
+* Login (파란색) : User의 입력을 통한 로그인 또는 회원가입으로 이동할 수 있는 컴포넌트
+
+**추가 설명**
+
+: 존재하지 않는 회원정보일 경우 팝업창을 통해 알림. 존재하는 회원정보일 경우 Polling List를 볼 수 있는 화면으로 이동
