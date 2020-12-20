@@ -1,4 +1,4 @@
-#### 요구사항
+## 요구사항 설계
 
 
 **1. 회원 기능**
@@ -22,10 +22,14 @@
 <br/>
 
 
+## 구조 설계
 
-#### 도메인 설계 (2차 수정본)
 
-![real_final_class](https://user-images.githubusercontent.com/31160622/102601860-12084900-4164-11eb-8c39-e8a683be1131.png)
+#### 도메인 설계 (JPA)
+
+![real_final_class](https://user-images.githubusercontent.com/31160622/102716198-9a7e1980-431d-11eb-9e11-ace1aa1ca301.png)
+
+: JPA에서는 JDBC를 사용했을 때와 달리 연관 관계에 있는 상대 테이블의 PK를 멤버변수로 갖지 않고, 엔티티 객체 자체를 통째로 참조해
 
 <br/>
 
@@ -49,3 +53,12 @@
 
 ![revised_schema](https://user-images.githubusercontent.com/31160622/102472416-a22d8c00-4099-11eb-8ab7-0480dae88a92.png)
 
+<br/>
+
+
+
+#### ERD - MYSQL WORKBENCH VERSION
+
+![sqlworkbench_erd](https://user-images.githubusercontent.com/31160622/102716226-cac5b800-431d-11eb-9aad-fec82b19ffda.PNG)
+
+<br/>
