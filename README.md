@@ -22,7 +22,10 @@
 
 
 **4. 기술 사항**
-Spring boot, Jpa, Mysql
+* Spring boot
+* Jpa
+* Mysql
+* 
 
 <br/>
 
