@@ -132,3 +132,34 @@ Spring boot, Jpa, Mysql
 
 : 추가적으로 검증하는 부분(아이디 중복, 비밀번호 확인)은 존재하지 않으며 User에게서 입력받은 정보를 바탕으로 회원가입을 진행.
 
+<br/>
+
+
+
+### PollingList 화면
+
+<img width="788" alt="설문목록" src="https://user-images.githubusercontent.com/31160622/102716855-cef3d480-4321-11eb-8385-44d66eb3fb0a.PNG">
+
+
+**Short Description**
+
+: 로그인 성공시 처음으로 보여지는 화면이자 설문목록들을 볼 수 있는 화면.
+
+<br/>
+
+**Detail Description**
+
+**1. Component**
+
+* Mainpage (노란색) : 로그인 성공 후 화면구성에 대해 전체 틀을 담당하는 컴포넌트
+* PollingList (파란색) : User의 입력을 통한 회원가입을 담당하는 컴포넌트
+
+**2. component구조**
+
+* Mainpage
+  * PollingList
+
+**3. 추가 설명**
+
+1) 우측상단의 버튼들을 통해 화면이동 가능. My 버튼의 경우 드롭다운 형태로 위 그림과 같은 메뉴들이 존재
+2) 설문목록들의 컨텐츠들은 클릭가능이며 만약 투표를 하였을 경우 결과화면으로, 하지 않았을 경우 투표화면으로 이동
