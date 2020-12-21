@@ -16,7 +16,7 @@ public class SubjectiveAnswer {
 
     private String answer;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "question_id")
     private Question question;
 

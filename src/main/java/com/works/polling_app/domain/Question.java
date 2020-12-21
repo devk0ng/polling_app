@@ -12,7 +12,7 @@ import java.util.List;
 
 @Entity
 @Getter @Setter
-//@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Question {
 
     @Id @GeneratedValue
@@ -28,14 +28,14 @@ public class Question {
     @JoinColumn(name = "survey_id")
     private Survey survey;
 
-    @OneToOne
-    private SubjectiveAnswer subjectiveAnswer;
+    @OneToMany(mappedBy = "question")
+    private List<SubjectiveAnswer> sbjAnswers;
 
-    @OneToMany
-    private List<ObjectvieAnswer> objectvieAnswers;
+    @OneToMany(mappedBy = "question")
+    private List<ObjectvieAnswer> objAnswers;
 
     public void addObjectvieAnswer(ObjectvieAnswer objectvieAnswer){
-        objectvieAnswers.add(objectvieAnswer);
+    //    objectvieAnswers.add(objectvieAnswer);
         objectvieAnswer.setQuestion(this);
     }
 
@@ -47,7 +47,7 @@ public class Question {
         question.setSurvey(survey);
 
         if(type == QuestionStatus.SUBJECTIVE){
-            question.setSubjectiveAnswer(subjectiveAnswer);
+       //     question.setSubjectiveAnswer(subjectiveAnswer);
         }
         else if(type == QuestionStatus.OBJECTIVE){
             for(ObjectvieAnswer o : objectvieAnswer){

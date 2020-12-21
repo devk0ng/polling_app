@@ -1,7 +1,7 @@
 package com.works.polling_app.repository;
 
-import com.works.polling_app.domain.*;
-import com.works.polling_app.domain.answer.SubjectiveAnswer;
+import com.works.polling_app.domain.Member;
+import com.works.polling_app.domain.Survey;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,25 +12,29 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Transactional
-@Rollback(false)
+@Rollback(value = false)
 class SurveyRepositoryTest {
+
     @Autowired SurveyRepository surveyRepository;
+    @Autowired MemberRepository memberRepository;
+
     @Test
     void save() {
-        //given
-        Member member = new Member();
-        member.setUserName("HongSeongBin");
-        member.setPassWord("abcabcabc");
+        Survey survey = new Survey();
 
-        //(Member member, Vote... votes)
-        Vote v = new Vote();
-        Survey survey = Survey.createSurvey(member,v);
+        Long id = 1L; //sungbin의 id
 
-        //when
-        surveyRepository.save(survey);
-
-        //then
+        Member member = memberRepository.findOne(id);
 
 
+
+    }
+
+    @Test
+    void findByMember() {
+    }
+
+    @Test
+    void findAll() {
     }
 }
