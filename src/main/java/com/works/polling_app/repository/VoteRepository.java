@@ -23,6 +23,8 @@ public class VoteRepository {
 
     //특정 회원을 바탕으로 투표한 vote 정보 반환
     public List<Vote> findByMember(Member member){
-        return em.createQuery("select v from Vote v where v.member = :member ",Vote.class).getResultList();
+        return em.createQuery("select v from Vote v where v.member = :member ",Vote.class)
+                .setParameter("member",member)
+                .getResultList();
     }
 }

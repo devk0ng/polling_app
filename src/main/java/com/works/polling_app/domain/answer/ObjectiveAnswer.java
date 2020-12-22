@@ -9,7 +9,7 @@ import java.util.List;
 
 @Entity
 @Getter @Setter
-public class ObjectvieAnswer {
+public class ObjectiveAnswer {
 
     @Id @GeneratedValue
     @Column(name = "objective_answer_id")

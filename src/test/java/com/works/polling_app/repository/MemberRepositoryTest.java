@@ -39,10 +39,9 @@ class MemberRepositoryTest {
         List<Vote> voteList = new ArrayList<>();
         voteList.add(vote);
 
-        member.setUserName("sungbin");
-        member.setPassWord("123");
+        member.setUserName("alex");
+        member.setPassWord("321");
         member.setSurveys(surveyList);
-        member.setUserName("hong");
         member.setVotes(voteList);
 
         //when

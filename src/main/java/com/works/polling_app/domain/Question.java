@@ -1,6 +1,6 @@
 package com.works.polling_app.domain;
 
-import com.works.polling_app.domain.answer.ObjectvieAnswer;
+import com.works.polling_app.domain.answer.ObjectiveAnswer;
 import com.works.polling_app.domain.answer.SubjectiveAnswer;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -29,29 +30,36 @@ public class Question {
     private Survey survey;
 
     @OneToMany(mappedBy = "question")
-    private List<SubjectiveAnswer> sbjAnswers;
+    private List<SubjectiveAnswer> sbjAnswers = new ArrayList<>();
 
     @OneToMany(mappedBy = "question")
-    private List<ObjectvieAnswer> objAnswers;
+    private List<ObjectiveAnswer> objAnswers = new ArrayList<>();
 
-    public void addObjectvieAnswer(ObjectvieAnswer objectvieAnswer){
-    //    objectvieAnswers.add(objectvieAnswer);
-        objectvieAnswer.setQuestion(this);
+    public void addSbjAnswer(SubjectiveAnswer subjectiveAnswer){
+        sbjAnswers.add(subjectiveAnswer);
+        subjectiveAnswer.setQuestion(this);
+    }
+
+    public void addObjAnswer(ObjectiveAnswer objectiveAnswer){
+        objAnswers.add(objectiveAnswer);
+        objectiveAnswer.setQuestion(this);
     }
 
     // 질문 생성 메서드
-    public static Question createQuestion(String ask, QuestionStatus type, Survey survey, SubjectiveAnswer subjectiveAnswer, ObjectvieAnswer... objectvieAnswer){
+    public static Question createQuestion(String ask, QuestionStatus type, Survey survey, List<SubjectiveAnswer> subjectiveAnswer, List<ObjectiveAnswer> objectiveAnswer){
         Question question = new Question();
         question.setQuestion(ask);
         question.setType(type);
         question.setSurvey(survey);
 
         if(type == QuestionStatus.SUBJECTIVE){
-       //     question.setSubjectiveAnswer(subjectiveAnswer);
+            for(SubjectiveAnswer o : subjectiveAnswer){
+                question.addSbjAnswer(o);
+            }
         }
         else if(type == QuestionStatus.OBJECTIVE){
-            for(ObjectvieAnswer o : objectvieAnswer){
-                question.addObjectvieAnswer(o);
+            for(ObjectiveAnswer o : objectiveAnswer){
+                question.addObjAnswer(o);
             }
         }
 
