@@ -2,52 +2,41 @@ package com.works.polling_app.repository;
 
 import com.works.polling_app.domain.Member;
 import com.works.polling_app.domain.Survey;
+import com.works.polling_app.domain.Vote;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Transactional
-@Rollback(value = false)
-class SurveyRepositoryTest {
+@Rollback(false)
+class VoteRepositoryTest {
 
+    @Autowired VoteRepository voteRepository;
     @Autowired SurveyRepository surveyRepository;
     @Autowired MemberRepository memberRepository;
 
     @Test
     void save() {
-        //(Member member, Vote... votes)
-
-
         //given
-        Long id = 3L; //sungbin의 id
-
-        Member member = memberRepository.findOne(id);
-        Survey survey = Survey.createSurvey(member,"how are u");
+        Vote vote = new Vote();
+        Survey survey = surveyRepository.findOne(2l);
+        Member member = memberRepository.findOne(1l);
+        vote.setSurvey(survey);
+        vote.setMember(member);
 
         //when
-        surveyRepository.save(survey);
+        voteRepository.save(vote);
 
         //then
-        List<Survey> res = surveyRepository.findByMember(id);
-
-        assertEquals(survey,res.get(0));
+        assertEquals(vote,voteRepository.findByMember(member).get(0));
     }
 
-
     @Test
-    void findAll() {
-        List<Survey> res = surveyRepository.findAll();
-
-        for(Survey s : res){
-            System.out.println(s.getStartDate());
-        }
-
+    void findByMember() {
     }
 }

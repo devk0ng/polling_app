@@ -34,21 +34,25 @@ public class Survey {
     //생성시간
     private LocalDateTime startDate;
 
+    //제목
+    private String title;
+
     public void addVote(Vote vote){
         votes.add(vote);
         vote.setSurvey(this);
     }
 
     // 설문조사 생성 메서드
-    public static Survey createSurvey(Member member, Vote... votes){
+    public static Survey createSurvey(Member member, String title){
         Survey survey = new Survey();
         survey.setMember(member);
 
-        for(Vote v : votes){
-            survey.addVote(v);
-        }
+//        for(Vote v : votes){
+//            survey.addVote(v);
+//        }
 
         survey.setStartDate(LocalDateTime.now());
+        survey.setTitle(title);
 
         return survey;
     }
