@@ -21,7 +21,11 @@ public class QuestionRepository {
         return em.find(Question.class, id);
     }
 
-    public List<Question> findAll(){
-        return em.createQuery("select q from Question q",Question.class).getResultList();
+    public List<Question> findBySurvey(Survey survey){
+        return em.createQuery("select q from Question q where q.survey=:survey",Question.class)
+                .setParameter("survey",survey)
+                .getResultList();
     }
+
+
 }

@@ -15,6 +15,7 @@ public class MemberService {
     private final MemberRepository memberRepository;
 
     //Register
+    @Transactional
     public Long join(Member member){
         memberRepository.save(member);
         return member.getId();

@@ -46,22 +46,22 @@ public class Question {
     }
 
     // 질문 생성 메서드
-    public static Question createQuestion(String ask, QuestionStatus type, Survey survey, List<SubjectiveAnswer> subjectiveAnswer, List<ObjectiveAnswer> objectiveAnswer){
+    public static Question createQuestion(String ask, QuestionStatus type, Survey survey){
         Question question = new Question();
         question.setQuestion(ask);
         question.setType(type);
         question.setSurvey(survey);
 
-        if(type == QuestionStatus.SUBJECTIVE){
-            for(SubjectiveAnswer o : subjectiveAnswer){
-                question.addSbjAnswer(o);
-            }
-        }
-        else if(type == QuestionStatus.OBJECTIVE){
-            for(ObjectiveAnswer o : objectiveAnswer){
-                question.addObjAnswer(o);
-            }
-        }
+//        if(type == QuestionStatus.SUBJECTIVE){
+//            for(SubjectiveAnswer o : subjectiveAnswer){
+//                question.addSbjAnswer(o);
+//            }
+//        }
+//        else if(type == QuestionStatus.OBJECTIVE){
+//            for(ObjectiveAnswer o : objectiveAnswer){
+//                question.addObjAnswer(o);
+//            }
+//        }
 
 
         return question;
