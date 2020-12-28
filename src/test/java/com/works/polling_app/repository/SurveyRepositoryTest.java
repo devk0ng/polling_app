@@ -26,10 +26,10 @@ class SurveyRepositoryTest {
 
 
         //given
-        Long id = 3L; //sungbin의 id
+        Long id = 24L; //sungbin의 id
 
         Member member = memberRepository.findOne(id);
-        Survey survey = Survey.createSurvey(member,"how are u");
+        Survey survey = Survey.createSurvey(member,"what's ur name");
 
         //when
         surveyRepository.save(survey);

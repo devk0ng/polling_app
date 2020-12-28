@@ -19,9 +19,9 @@ public class SurveyRepository {
     }
 
     //회원바탕 자신이 만든 설문조사 조회
-    public List<Survey> findByMember(Long id){
-        return em.createQuery("select s from Survey s where s.member.id = :id",Survey.class)
-                .setParameter("id",id)
+    public List<Survey> findByMember(Long memberId){
+        return em.createQuery("select s from Survey s where s.member.id = :memberId",Survey.class)
+                .setParameter("memberId",memberId)
                 .getResultList();
     }
 

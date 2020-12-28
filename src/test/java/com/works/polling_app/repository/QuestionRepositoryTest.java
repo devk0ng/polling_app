@@ -42,7 +42,7 @@ class QuestionRepositoryTest {
         subjectiveAnswers.add(SbjAnswer);
         subjectiveAnswers.add(SbjAnswer2);
 
-        Question question = Question.createQuestion(ask,type,survey.get(0),subjectiveAnswers,null);
+        Question question = Question.createQuestion(ask,type,survey.get(0));
 
         //when
         questionRepository.save(question);
@@ -74,7 +74,7 @@ class QuestionRepositoryTest {
         objectiveAnswers.add(objAnswer);
         objectiveAnswers.add(objAnswer2);
 
-        Question question = Question.createQuestion(ask,type,survey.get(0),null,objectiveAnswers);
+        Question question = Question.createQuestion(ask,type,survey.get(0));
 
         //when
         questionRepository.save(question);
